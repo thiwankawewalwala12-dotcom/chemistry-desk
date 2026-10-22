@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f6fb">
+<meta name="description" content="A free, mobile-friendly A/L Chemistry lesson link hub.">
+<title>Chemistry Desk — A/L Chemistry</title>
+<style>
+:root{color-scheme:light dark;--bg:#f4f6fb;--surface:#fff;--surface2:#edf1f8;--ink:#172033;--muted:#657086;--line:#dce2ed;--accent:#2458c6;--accent-soft:#e4ecff;--green:#147d63;--shadow:0 8px 28px #1720330b;--radius:22px}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#10131a;--surface:#191e28;--surface2:#222a38;--ink:#f2f5fc;--muted:#aab4c7;--line:#303a4c;--accent:#a8c2ff;--accent-soft:#263654;--green:#70d7b5;--shadow:0 8px 28px #0003}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:background .2s,color .2s}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}button,input{font:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}.top-inner{max-width:1200px;margin:auto;display:flex;align-items:center;gap:14px;padding:12px 22px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:var(--accent-soft);font-size:21px}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:650;letter-spacing:.09em;text-transform:uppercase}.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:50%;width:42px;height:42px;cursor:pointer;flex-shrink:0}.icon-btn:hover{background:var(--surface2)}
+main{max-width:1200px;margin:auto;padding:26px 22px 70px}.hero{display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:24px;padding:clamp(26px,5vw,54px);border-radius:30px;background:linear-gradient(125deg,#e3edff,#f2eaff 60%,#dcf7ec);color:#172033;border:1px solid #d8e2f6;overflow:hidden}.hero .eyebrow{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:#2458c6}.hero h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.02;letter-spacing:-.065em;margin:12px 0 16px;max-width:760px}.hero p{max-width:650px;color:#4f5b72;margin:0;font-size:1.05rem}.flask{font-size:clamp(90px,14vw,160px);text-align:center;filter:drop-shadow(0 14px 12px #22365b1a)}.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.pill{font-size:.82rem;font-weight:650;padding:7px 12px;border-radius:999px;background:#ffffffa8;border:1px solid #ffffffd9;color:#34415a}
+.section-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:28px 0 12px}.section-label h2{font-size:1.05rem;letter-spacing:-.02em;margin:0}.section-label p{color:var(--muted);font-size:.88rem;margin:0}.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.quick a{display:flex;gap:13px;align-items:flex-start;padding:18px;border:1px solid var(--line);background:var(--surface);border-radius:19px;color:var(--ink);box-shadow:var(--shadow);transition:transform .16s,border-color .16s}.quick a:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none}.quick .qicon{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;border-radius:14px;background:var(--surface2);font-size:20px}.quick strong{display:block;font-size:.97rem}.quick small{display:block;color:var(--muted);margin-top:4px;font-size:.84rem}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:24px;align-items:start;margin-top:30px}.sidebar{position:sticky;top:86px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.sidebar h2{font-size:.9rem;margin:2px 8px 12px}.navlinks{display:grid;gap:4px}.navlinks a{display:flex;align-items:center;gap:9px;padding:10px 11px;border-radius:12px;color:var(--muted);font-size:.9rem}.navlinks a:hover,.navlinks a.active{background:var(--accent-soft);color:var(--accent);text-decoration:none}.content{min-width:0}.content>h1:first-child{display:none}.content h2{font-size:clamp(1.35rem,2.7vw,1.85rem);letter-spacing:-.04em;margin:0 0 16px;padding:15px 0 10px;border-bottom:1px solid var(--line);scroll-margin-top:92px}.content h2:not(:first-of-type){margin-top:34px}.content h3{font-size:1.04rem;margin:22px 0 8px}.content p,.content li{color:var(--muted)}.content ul{padding-left:23px}.table-wrap{overflow-x:auto;margin:12px 0 22px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}table{border-collapse:collapse;width:100%;min-width:300px;font-size:.94rem}th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}th{background:var(--surface2);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}tr:last-child td{border-bottom:0}tr:hover td{background:var(--surface2)}.content blockquote{margin:12px 0;padding:12px 16px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;color:var(--muted)}.content a{font-weight:600}.content a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.empty{display:none;text-align:center;padding:30px;color:var(--muted);border:1px dashed var(--line);border-radius:18px}.tute-label{margin-top:22px}.tute-label h3{margin:0;font-size:1rem}.tute-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.tute-links a{display:flex;align-items:center;gap:10px;padding:14px;border:1px solid var(--line);border-radius:15px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);transition:transform .18s,border-color .18s}.tute-links a:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none}.tute-links a span{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--accent-soft)}.tute-links a strong{flex:1;font-size:.87rem}.tute-links a b{color:var(--accent)}.footer{text-align:center;color:var(--muted);padding:30px 10px 10px;font-size:.87rem}.backtop{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border:0;border-radius:50%;background:var(--accent);color:white;box-shadow:0 6px 22px #0002;cursor:pointer;font-size:20px;display:none}.backtop.show{display:block}.hide{display:none!important}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.sidebar{position:static}.navlinks{display:flex;overflow:auto;padding-bottom:3px}.navlinks a{white-space:nowrap;flex-shrink:0}.quick{grid-template-columns:1fr}.tute-links{grid-template-columns:1fr}.hero{grid-template-columns:1fr 100px}.flask{font-size:90px}.sidebar h2{margin-bottom:8px}}
+@media(max-width:560px){.top-inner{padding:10px 13px;gap:9px;flex-wrap:wrap}.brand{flex:1}.brand small{font-size:10px}.logo{width:36px;height:36px}main{padding:15px 13px 48px}.hero{padding:25px 21px;border-radius:23px;grid-template-columns:1fr}.hero h1{font-size:2.55rem}.hero p{font-size:.98rem}.flask{display:none}.pills{margin-top:18px}.section-label{align-items:flex-start;flex-direction:column;gap:2px}.quick a{padding:15px;border-radius:17px}.sidebar{padding:12px;border-radius:17px}.navlinks a{padding:9px 11px}.content h2{padding-top:12px}th,td{padding:10px;font-size:.88rem}.backtop{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@media print{.topbar,.sidebar,.quick,.backtop{display:none!important}main{padding:0}.layout{display:block}.hero{background:white;border:1px solid #ddd}.content a{color:#111;text-decoration:underline}body{background:white;color:#111}}
+/* Apple-inspired finish: quiet depth, translucent surfaces, soft system-blue accents. */
+:root{--bg:#f3f4f8;--surface:rgba(255,255,255,.76);--surface2:#eef0f6;--ink:#1d1d1f;--muted:#70727b;--line:rgba(25,31,48,.10);--accent:#625bd5;--accent-soft:rgba(98,91,213,.11);--green:#248a68;--shadow:0 12px 34px rgba(27,31,53,.07);--radius:24px}
+:root[data-theme="dark"]{--bg:#101114;--surface:rgba(34,35,41,.78);--surface2:#292a31;--ink:#f5f5f7;--muted:#a1a1a8;--line:rgba(255,255,255,.10);--accent:#aaa5ff;--accent-soft:rgba(170,165,255,.15);--green:#76d6b1;--shadow:0 18px 42px rgba(0,0,0,.28)}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.012em;background-image:radial-gradient(ellipse at 78% 2%,rgba(163,157,255,.13),transparent 34%),radial-gradient(ellipse at 4% 42%,rgba(123,197,255,.08),transparent 33%)}
+a{transition:color .2s ease}a:hover{text-decoration:none}
+.topbar{background:color-mix(in srgb,var(--bg) 76%,transparent);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border-bottom-color:var(--line)}.top-inner{padding-top:13px;padding-bottom:13px}.brand{font-size:1.02rem;letter-spacing:-.04em}.logo{background:linear-gradient(145deg,#dfe4ff,#ece6ff);box-shadow:inset 0 1px 0 #ffffffc9,0 5px 14px #544c9818}.icon-btn{background:var(--surface);box-shadow:0 3px 12px #15172a0a;transition:transform .2s,background .2s,box-shadow .2s}.icon-btn:hover{transform:scale(1.04);box-shadow:var(--shadow)}
+main{padding-top:30px}.hero{position:relative;border-radius:32px;background:linear-gradient(125deg,rgba(228,235,255,.94),rgba(244,239,255,.93) 56%,rgba(225,246,241,.95));border:1px solid rgba(255,255,255,.76);box-shadow:0 22px 65px rgba(63,71,119,.10),inset 0 1px 0 #ffffffd9}.hero:before{content:"";position:absolute;width:330px;height:330px;right:5%;top:-48%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.78),transparent 70%);pointer-events:none}.hero h1{font-weight:720;letter-spacing:-.075em}.hero .eyebrow{color:#5751b5}.hero p{color:#555b6c}.pill{box-shadow:inset 0 1px 0 #ffffffa8;backdrop-filter:blur(12px)}
+:root[data-theme="dark"] .hero{color:#f5f5f7;background:linear-gradient(125deg,rgba(53,57,82,.96),rgba(56,48,77,.95) 56%,rgba(36,66,65,.95));border-color:rgba(255,255,255,.12);box-shadow:0 22px 65px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.09)}:root[data-theme="dark"] .hero .eyebrow{color:#c0bbff}:root[data-theme="dark"] .hero p{color:#d0d1dd}:root[data-theme="dark"] .pill{color:#f5f5f7;background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.13)}
+.section-label{margin-top:32px}.quick a,.tute-links a{background:var(--surface);backdrop-filter:saturate(150%) blur(18px);-webkit-backdrop-filter:saturate(150%) blur(18px);border-color:var(--line);border-radius:21px;box-shadow:var(--shadow);padding:19px;transition:transform .22s cubic-bezier(.2,.8,.2,1),border-color .22s,box-shadow .22s}.quick a:hover,.tute-links a:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 40%,var(--line));box-shadow:0 18px 44px rgba(36,40,78,.12)}.quick .qicon,.tute-links a span{border-radius:13px;background:var(--accent-soft)}
+.layout{gap:26px;margin-top:34px}.sidebar{top:88px;padding:15px;background:var(--surface);backdrop-filter:saturate(160%) blur(22px);-webkit-backdrop-filter:saturate(160%) blur(22px);border-color:var(--line);border-radius:24px;box-shadow:var(--shadow)}.sidebar h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);padding:4px 8px}.navlinks{gap:5px}.navlinks a{padding:10px 12px;border-radius:13px;transition:background .18s,color .18s,transform .18s}.navlinks a:hover{transform:translateX(2px)}.navlinks a.active{font-weight:700}
+.content h2{font-weight:700;letter-spacing:-.05em;border-bottom-color:var(--line);padding-bottom:12px}.content h3{letter-spacing:-.025em}.table-wrap{border-radius:18px;background:var(--surface);box-shadow:var(--shadow);border-color:var(--line);overflow:hidden}table{font-size:.92rem}th{background:var(--surface2);color:var(--muted);font-size:.72rem;letter-spacing:.09em}td{padding-top:13px;padding-bottom:13px}tr:hover td{background:var(--accent-soft)}.content a{font-weight:650}.footer{letter-spacing:.01em}.backtop{background:var(--accent);box-shadow:0 8px 25px color-mix(in srgb,var(--accent) 30%,transparent);transition:transform .2s}.backtop:hover{transform:translateY(-3px)}
+@media(max-width:850px){.sidebar{border-radius:20px}.navlinks{scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a:hover{transform:none}}
+@media(max-width:560px){main{padding-top:16px}.hero{border-radius:25px}.quick a,.tute-links a{padding:15px;border-radius:17px}.layout{margin-top:26px}.sidebar{border-radius:19px}.section-label{margin-top:25px}}
+@media(prefers-reduced-motion:reduce){.quick a,.tute-links a,.navlinks a,.backtop,.icon-btn{transition:none}}</style>
+</head>
+<body id="top">
+<header class="topbar"><div class="top-inner">
+  <div class="brand"><div class="logo">⚗️</div><div>Chemistry Desk<small>A/L study resources</small></div></div>
+  <button class="icon-btn" id="themeToggle" aria-label="Switch colour theme" title="Switch colour theme">☾</button>
+</div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">Your personal study space</div><h1>A/L Chemistry,<br>all in one place.</h1><p>Find lesson videos, recordings and study resources by topic. Built to feel right on a Windows laptop and an Android phone.</p><div class="pills"><span class="pill">✓ Free to use</span><span class="pill">↗ Direct lesson links</span><span class="pill">▦ Topic-organised</span></div></div><div class="flask" aria-hidden="true">🧪</div></section>
+<div class="section-label"><h2>Quick access</h2><p>Jump straight to your study resources</p></div>
+<div class="quick">
+<a href="https://t.me/+OEQXQavLod43ZmJl" target="_blank" rel="noopener"><span class="qicon">📣</span><span><strong>Telegram — Tute links ↗</strong><small>Open the Telegram resource group</small></span></a>
+<a href="https://drive.google.com/drive/u/1/folders/14U9AHZA4xo-4Y8YVGyrpn07mNi_-_SKH" target="_blank" rel="noopener"><span class="qicon">📁</span><span><strong>Google Drive — Tutes ↗</strong><small>Open the tutes folder</small></span></a>
+<a href="https://t.me/c/2942061365/809" target="_blank" rel="noopener"><span class="qicon">🎥</span><span><strong>Charitha Dissanayake ↗</strong><small>Recording (6–14 units)</small></span></a>
+</div>
+<div class="layout">
+<aside class="sidebar"><h2>Explore topics</h2><nav class="navlinks" aria-label="Chemistry topics"><a class="active" href="#all">📚 All recordings</a>
+<a href="#inorganic-chemistry">🟦 Inorganic</a><a href="#chemical-kinetics">🟩 Chemical kinetics</a><a href="#organic-chemistry">🟪 Organic</a><a href="#equilibrium-kp-and-kc">🟧 Equilibrium</a><a href="#solubility-product-ksp">🟨 Solubility product</a><a href="#buffer-region-equilibrium">🟥 Buffer equilibrium</a><a href="#ph">🩵 pH</a><a href="#electrochemistry">🟫 Electrochemistry</a><a href="#industrial-chemistry">🏭 Industrial</a><a href="#study-notes">📝 Study notes</a>
+</nav></aside>
+<section class="content" id="content">
+<div id="content"><h2 id="quick-access">🚀 QUICK ACCESS</h2>
+<div class="table-wrap"><table>
+<tr><th>Resource</th><th>Open</th></tr>
+<tr><td>📣 <strong>Telegram — Tute links</strong></td><td><a href="https://t.me/+OEQXQavLod43ZmJl" rel="noopener noreferrer" target="_blank">OPEN TELEGRAM ↗</a></td></tr>
+<tr><td>📁 <strong>Google Drive — Tutes folder</strong></td><td><a href="https://drive.google.com/drive/u/1/folders/14U9AHZA4xo-4Y8YVGyrpn07mNi_-_SKH" rel="noopener noreferrer" target="_blank">OPEN DRIVE ↗</a></td></tr>
+<tr><td>🎥 <strong>Charitha Dissanayake — Recording (6–14 units)</strong></td><td><a href="https://t.me/c/2942061365/809" rel="noopener noreferrer" target="_blank">WATCH ↗</a></td></tr>
+</table></div>
+<h2 id="inorganic-chemistry">🟦 INORGANIC CHEMISTRY</h2>
+<div class="table-wrap"><table>
+<tr><th>Lesson</th><th>Video</th></tr>
+<tr><td>Inorganic 01</td><td><a href="https://youtu.be/3Y6VKZP2zAQ" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 02</td><td><a href="https://youtu.be/lPOVYwc7pwQ" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 03</td><td><a href="https://youtu.be/HhMEqhLwCdc" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 04</td><td><a href="https://youtu.be/zclyf1kQAXk" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 05</td><td><a href="https://youtu.be/kD1w4c5Oswc" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 06</td><td><a href="https://youtu.be/jBeOmFsVppk" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 07</td><td><a href="https://youtu.be/j9SnMSpPIc8" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 08</td><td><a href="https://youtu.be/FRTNCA6q9ME" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 09</td><td><a href="https://youtu.be/TdvYzVkHUO4" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 10</td><td><a href="https://youtu.be/jIsbs2KfP5c" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 11</td><td><a href="https://youtu.be/bjuaZ86RVzk" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Inorganic 12</td><td><a href="https://youtu.be/ZYkiiWqGYUI" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+</table></div>
+<h2 id="chemical-kinetics">🟩 CHEMICAL KINETICS</h2>
+<h3 id="day-01">📘 Day 01</h3>
+<ul>
+<li><a href="https://rumble.com/v74ureo-kinetic-day-01-p01.html" rel="noopener noreferrer" target="_blank">▶ Part 1 — Rumble ↗</a></li>
+<li><a href="https://rumble.com/v74urtm-chemical-kinetics-day-01-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 2 — Rumble ↗</a></li>
+</ul>
+<h3 id="day-02">📘 Day 02</h3>
+<ul>
+<li><a href="https://rumble.com/v74urzc-chemical-kinetics-day-02-p01.html" rel="noopener noreferrer" target="_blank">▶ Part 1 — Rumble ↗</a></li>
+<li><a href="https://rumble.com/v74us2i-chemical-kinetics-day-02-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 2 — Rumble ↗</a></li>
+</ul>
+<h3 id="day-03">📘 Day 03</h3>
+<ul>
+<li><a href="https://rumble.com/v74us68-chemical-kinetics-day-03-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 1 — source label says P02 ↗</a></li>
+<li><a href="https://rumble.com/v74us68-chemical-kinetics-day-03-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 2 — source link as provided ↗</a></li>
+</ul>
+<h3 id="day-04">📘 Day 04</h3>
+<ul>
+<li><a href="https://rumble.com/v74ut3i-chemical-kinetics-day-04-p01.html" rel="noopener noreferrer" target="_blank">▶ Part 1 ↗</a></li>
+<li><a href="https://rumble.com/v74utv0-chemical-kinetics-day-04-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 2 ↗</a></li>
+</ul>
+<h3 id="day-05">📘 Day 05</h3>
+<ul>
+<li><a href="https://rumble.com/v74utzc-chemical-kinetics-day-05-p01.html" rel="noopener noreferrer" target="_blank">▶ Part 1 ↗</a></li>
+<li><a href="https://rumble.com/v74uu3c-chemical-kinetics-day-05-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 2 ↗</a></li>
+</ul>
+<h3 id="day-06">📘 Day 06</h3>
+<ul>
+<li><a href="https://rumble.com/v74lf9q-chemical-kinetics-06-p01.html" rel="noopener noreferrer" target="_blank">▶ Part 1 ↗</a></li>
+<li><a href="https://rumble.com/v74mf6i-chemical-kinetics-06-p02.html" rel="noopener noreferrer" target="_blank">▶ Part 2 ↗</a></li>
+</ul>
+<h2 id="organic-chemistry">🟪 ORGANIC CHEMISTRY</h2>
+<h3 id="days-01-06">🧬 Days 01–06</h3>
+<div class="table-wrap"><table>
+<tr><th>Day</th><th>Part 1</th><th>Part 2</th></tr>
+<tr><td>01</td><td><a href="https://rumble.com/v74uula-organic-day-01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v74uwwa-organic-day-01-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>02</td><td><a href="https://rumble.com/v74uypg-organic-day-02-p01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v74uz3y-organic-day-02-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>03</td><td><a href="https://rumble.com/v74v1s4-organic-day-03-p01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v74v2c0-organic-day-03-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>04</td><td><a href="https://rumble.com/v74v3ie-organic-day-04-p01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v74v3sq-organic-day-04-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>05</td><td><a href="https://rumble.com/v74mhhi-organic-day-05-p01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v74lly2-chemical-kinetics-day-06-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>06</td><td><a href="https://rumble.com/v74ztla-organic-day-06-p01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v74zu6k-organic-day-06-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+</table></div>
+<h3 id="days-07-12">🧬 Days 07–12</h3>
+<div class="table-wrap"><table>
+<tr><th>Day</th><th>Part 1</th><th>Part 2 / Recording</th></tr>
+<tr><td>07</td><td><a href="https://rumble.com/v75d11w-organic-day-07-p01.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://rumble.com/v75d2x2-organic-day-07-p02.html" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>08</td><td><a href="https://youtu.be/5qaY6Su7ITU?si=KKi7q1Qi4-Pe__-U" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://youtu.be/-9HC6V-asv4?si=1AhZozXJzewqjHYm" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>09</td><td><a href="https://youtu.be/uXwUW78slFw" rel="noopener noreferrer" target="_blank">Watch ↗</a></td><td><a href="https://youtu.be/n7rpvp9ZSp4" rel="noopener noreferrer" target="_blank">Watch ↗</a></td></tr>
+<tr><td>10</td><td><a href="https://youtu.be/hHQLJBGcjCc" rel="noopener noreferrer" target="_blank">Recording ↗</a></td><td>—</td></tr>
+<tr><td>11</td><td><a href="https://youtu.be/INrsNJi9Ddw" rel="noopener noreferrer" target="_blank">Recording ↗</a></td><td>—</td></tr>
+<tr><td>12</td><td><a href="https://youtu.be/ACB22wuFX4M" rel="noopener noreferrer" target="_blank">Recording ↗</a></td><td>—</td></tr>
+</table></div>
+<h3 id="days-13-18">🧬 Days 13–18</h3>
+<div class="table-wrap"><table>
+<tr><th>Day</th><th>Recording</th></tr>
+<tr><td>13</td><td><a href="https://youtu.be/LfQQPbHaGwY" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>14</td><td><a href="https://youtu.be/biuNbnnGWsQ" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>15</td><td><a href="https://youtu.be/6r2GNeBr6JE" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>16</td><td><a href="https://youtu.be/bbNmEWwNtCU" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>17</td><td><a href="https://youtu.be/LFd6je0NNec" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>18</td><td><a href="https://youtu.be/7avFu6yrPLM" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+</table></div>
+<h3 id="days-19-30">🧬 Days 19–30</h3>
+<div class="table-wrap"><table>
+<tr><th>Day</th><th>Recording</th></tr>
+<tr><td>19</td><td><a href="https://youtu.be/9OewZoeLFVw" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>20</td><td><a href="https://youtu.be/8Ea6jshluIE" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>21</td><td><a href="https://youtu.be/rewPK6XGJws" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>22</td><td><a href="https://youtu.be/4PAusH1yK5c" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>23</td><td><a href="https://youtu.be/ggW3vS8Su4s" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>24</td><td><a href="https://youtu.be/ggW3vS8Su4s" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>25</td><td><a href="https://youtu.be/PZvkmIbDg4g" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>26</td><td><a href="https://youtu.be/7ma73P0fXTc" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>27</td><td><a href="https://youtu.be/Q0ueEbmADhw" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>28</td><td><a href="https://youtu.be/Qccf-Oh-6G0" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>29</td><td><a href="https://youtu.be/FFZJlYU06rs" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>30</td><td><a href="https://youtu.be/1CQ92qbUzkQ" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+</table></div>
+<h2 id="equilibrium-kp-and-kc">🟧 EQUILIBRIUM — Kp AND Kc</h2>
+<div class="table-wrap"><table>
+<tr><th>Lesson</th><th>Video</th></tr>
+<tr><td>Day 01 — Part 1</td><td><a href="https://rumble.com/v74zrv8-equilibrium-day-01-p01.html" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 01 — Part 2</td><td><a href="https://rumble.com/v74yggw-eequilibrium-01-p02.html" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 02 — Part 1</td><td><a href="https://youtu.be/lb5qz88luz8?si=wT2UcEfTOWVPaQ4ll" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 02 — Part 2</td><td><a href="https://youtu.be/Y6BSmxy45gs" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 03</td><td><a href="https://youtu.be/c7ii6P7kdus?si=38k5KtqKR8k8yNXs" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 04</td><td><a href="https://youtu.be/6BmevmWrQDU?si=RvnZdJmqGQswCdvJ" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 05</td><td><a href="https://youtu.be/AlcZg8Sb78A" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 06</td><td><a href="https://youtu.be/AlcZg8Sb78A" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 07</td><td><a href="https://youtu.be/N51Gan12x3g" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 08</td><td><a href="https://youtu.be/KZGeFPzKbhk" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+</table></div>
+<h2 id="solubility-product-ksp">🟨 SOLUBILITY PRODUCT — Ksp</h2>
+<h3 id="">ද්‍රාව්‍යතා ගුණිතය</h3>
+<ul>
+<li><a href="https://youtu.be/DBPER9uVb9E" rel="noopener noreferrer" target="_blank">▶ Day 01 ↗</a></li>
+<li><a href="https://youtu.be/y-_E1wGuTHQ?si=Mwah1uFuVHfrHAXY" rel="noopener noreferrer" target="_blank">▶ Day 02 ↗</a></li>
+<li><a href="https://youtu.be/JeUXugb2pGI" rel="noopener noreferrer" target="_blank">▶ Day 03 ↗</a></li>
+<li><a href="https://youtu.be/AV7JgRM96JE" rel="noopener noreferrer" target="_blank">▶ Day 04 ↗</a></li>
+<li><a href="https://www.youtube.com/live/WyZzvNSkqRc?si=gG_x_bMMiyFAghx4" rel="noopener noreferrer" target="_blank">▶ Day 05 ↗</a></li>
+</ul>
+<h2 id="buffer-region-equilibrium">🟥 BUFFER / REGION EQUILIBRIUM</h2>
+<h3 id="">කලාප සමතුලිතතාවය</h3>
+<ul>
+<li><a href="https://youtu.be/W1_HQ-YLtYA?si=ymHFSuVBngPml3XW" rel="noopener noreferrer" target="_blank">▶ Day 01 ↗</a></li>
+<li><a href="https://youtu.be/lkisWtdBU5M" rel="noopener noreferrer" target="_blank">▶ Day 02 ↗</a></li>
+<li><a href="https://youtu.be/jxPuvRm1WD8" rel="noopener noreferrer" target="_blank">▶ Day 03 ↗</a></li>
+<li><a href="https://youtu.be/NPmQjrZnD0o" rel="noopener noreferrer" target="_blank">▶ Day 04 ↗</a></li>
+<li><a href="https://youtu.be/vhT9dfXw2Mc" rel="noopener noreferrer" target="_blank">▶ Day 05 ↗</a></li>
+<li><a href="https://youtu.be/wzbHqIFEG9k" rel="noopener noreferrer" target="_blank">▶ Day 06 ↗</a></li>
+<li><a href="https://youtu.be/0ZpjEtTTBes" rel="noopener noreferrer" target="_blank">▶ Day 07 ↗</a></li>
+<li><a href="https://youtu.be/loij6uiedh0" rel="noopener noreferrer" target="_blank">▶ Day 08 ↗</a></li>
+</ul>
+<h2 id="ph">🩵 pH</h2>
+<div class="table-wrap"><table>
+<tr><th>Lesson</th><th>Video</th></tr>
+<tr><td>Day 01</td><td><a href="https://youtu.be/5plY8aplLu0" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 02</td><td><a href="https://youtu.be/XC4nPblkkSM" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 03</td><td><a href="https://youtu.be/mmTfyJJvSos" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 04</td><td><a href="https://youtu.be/BfmiYFO1P48" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 05 — Part 1</td><td><a href="https://youtu.be/4eklUzW2SQY" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 05 — Part 2</td><td><a href="https://youtu.be/QeQsyRYooZ8" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 06</td><td><a href="https://youtu.be/slHJzA-bTi0?is=cgQvxrN1WW8mPY_i" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 07</td><td><a href="https://youtu.be/LKXfj12OLdw" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 08</td><td><a href="https://youtu.be/d8xuWny5iNM" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Day 09</td><td><a href="https://youtu.be/hAPNSvF50kw" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+</table></div>
+<h2 id="electrochemistry">🟫 ELECTROCHEMISTRY</h2>
+<h3 id="">විද්‍යුත් රසායනය</h3>
+<ul>
+<li><a href="https://youtu.be/DpChsSFOnnw" rel="noopener noreferrer" target="_blank">▶ Day 01 ↗</a></li>
+<li><a href="https://youtu.be/AUeEmx-Rqu4" rel="noopener noreferrer" target="_blank">▶ Day 02 ↗</a></li>
+<li><a href="https://youtu.be/PGEUaVpZaN8" rel="noopener noreferrer" target="_blank">▶ Day 03 ↗</a></li>
+<li><a href="https://youtu.be/kIgEyr8d97w" rel="noopener noreferrer" target="_blank">▶ Day 04 ↗</a></li>
+<li><a href="https://youtu.be/TaUj10co0MI" rel="noopener noreferrer" target="_blank">▶ Day 05 ↗</a></li>
+<li><a href="https://youtu.be/yhwKpKNthYM" rel="noopener noreferrer" target="_blank">▶ Day 06 ↗</a></li>
+<li><a href="https://www.youtube.com/watch?v=WyZzvNSkqRc" rel="noopener noreferrer" target="_blank">▶ Day 07 ↗</a></li>
+</ul>
+<h2 id="industrial-chemistry">🏭 INDUSTRIAL CHEMISTRY</h2>
+<h3 id="recordings-question-discussions">Recordings &amp; question discussions</h3>
+<div class="table-wrap"><table>
+<tr><th>Topic</th><th>Open lesson</th></tr>
+<tr><td>Magnesium extraction (Mg නිස්සාරණය)</td><td><a href="https://www.youtube.com/watch?v=NIH5MZ4rM0s" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Titanium dioxide production (TiO₂)</td><td><a href="https://www.youtube.com/watch?v=lZawFPb9UHA" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Sodium hydroxide production (NaOH)</td><td><a href="https://www.youtube.com/watch?v=Qglm_IAy-j0" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Iron production (යකඩ නිෂ්පාදනය)</td><td><a href="https://www.youtube.com/watch?v=pvNsGvtjHpI" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Soap production (සබන් නිෂ්පාදනය)</td><td><a href="https://www.youtube.com/watch?v=eZ79cEU8zSc" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Polymer production — Day 01 (බහු අවයවික)</td><td><a href="https://www.youtube.com/watch?v=o3pSLd3TnTE" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Polymer production — Day 02 (බහුඅවයවික)</td><td><a href="https://www.youtube.com/watch?v=TYv18TdQ-QE" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Ammonia production (NH₃)</td><td><a href="https://www.youtube.com/watch?v=BuSKE2YdHwQ" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Plant-based products — Day 01 (ශාක ආශ්‍රිත නිෂ්පාදන)</td><td><a href="https://www.youtube.com/watch?v=k9M9TqNbJHs" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Plant-based products — Day 02 (ශාක ආශ්‍රිත නිෂ්පාදන)</td><td><a href="https://www.youtube.com/watch?v=4H3Z6BdNOl8" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Nitric acid production (HNO₃)</td><td><a href="https://www.youtube.com/watch?v=yS8kHSNIkww" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Sulfuric acid production (H₂SO₄)</td><td><a href="https://www.youtube.com/watch?v=geMS0F14A4Q" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Industrial chemistry questions — Day 01</td><td><a href="https://www.youtube.com/watch?v=YWbJiLtCss0" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Industrial chemistry questions — Day 02</td><td><a href="https://www.youtube.com/watch?v=HNVtbpXHCRk" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Industrial chemistry questions — Day 03</td><td><a href="https://www.youtube.com/watch?v=aV7k59P2Two" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+<tr><td>Industrial chemistry recording / discussion</td><td><a href="https://www.youtube.com/watch?v=6rMkRN1drgs" rel="noopener noreferrer" target="_blank">▶ Watch ↗</a></td></tr>
+</table></div>
+<h2 id="study-notes">📝 STUDY NOTES</h2>
+<ul>
+<li>Choose a topic from the selector to view its complete recording list.</li>
+<li>Tap a lesson link to open the recording on its original platform.</li>
+<li>Some links in the source were repeated or may not match their labels. They have been kept as provided instead of guessing the intended video.</li>
+
+</ul><div class="section-label tute-label"><h3>Tute links</h3><p>Open your class resources</p></div><div class="tute-links"><a href="https://t.me/+OEQXQavLod43ZmJl" target="_blank" rel="noopener noreferrer"><span>📣</span><strong>Telegram tute links</strong><b>↗</b></a><a href="https://drive.google.com/drive/u/1/folders/14U9AHZA4xo-4Y8YVGyrpn07mNi_-_SKH" target="_blank" rel="noopener noreferrer"><span>📁</span><strong>Google Drive tutes</strong><b>↗</b></a><a href="https://t.me/c/2942061365/809" target="_blank" rel="noopener noreferrer"><span>🎥</span><strong>Charitha Dissanayake recordings</strong><b>↗</b></a></div></div>
+
+</section>
+</div>
+<footer class="footer">Made for focused study · Chemistry Desk<br>Lesson links open on their original platforms. Access may depend on the provider.</footer>
+</main>
+<button class="backtop" id="backtop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+const root=document.querySelector('#content > #content');let selectedTopic='all';
+function applyView(){let activeHeading=null,sectionVisible=true;for(const el of [...root.children]){if(el.tagName==='H2'){activeHeading=el;sectionVisible=selectedTopic==='all'||el.id===selectedTopic;}el.classList.toggle('hide',!sectionVisible);}}
+for(const link of document.querySelectorAll('.navlinks a'))link.addEventListener('click',event=>{event.preventDefault();selectedTopic=link.hash.slice(1)||'all';document.querySelectorAll('.navlinks a').forEach(item=>item.classList.toggle('active',item===link));applyView();document.getElementById('content').scrollIntoView({behavior:'smooth',block:'start'});});const toggle=document.getElementById('themeToggle');
+function setTheme(theme){document.documentElement.dataset.theme=theme;toggle.textContent=theme==='dark'?'☀':'☾';toggle.setAttribute('aria-label',theme==='dark'?'Switch to light theme':'Switch to dark theme');try{localStorage.setItem('chemistry-theme',theme)}catch(e){}}
+let saved='light';try{saved=localStorage.getItem('chemistry-theme')||'light'}catch(e){}setTheme(saved);
+toggle.addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+const backtop=document.getElementById('backtop');window.addEventListener('scroll',()=>backtop.classList.toggle('show',window.scrollY>450),{passive:true});backtop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+</script>
+</body></html>
+
+
+
+
+
